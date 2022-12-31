@@ -1,0 +1,76 @@
+# def solution(board):
+#     result = 0
+#     bombs = []
+#     for x in range(len(board)):
+#         for y in range(len(board[x])):
+#             if board[x][y] == 1:
+#                 bombs.append([x,y])
+#     for x,y in bombs:
+#         bombs[x,y] =
+#         byun = [[-1,-1],[-1,0],[-1,-1],[0,-1],[0,1],[1,-1],[1,0],[1,1]]
+#     for i in board:
+#         if board[i] == '1' or board[i] == '2':
+#             result += 1
+#             len(board) * len(board) - (len(bombs) + result)
+#     return board
+# board = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]
+# print(solution(board))
+
+
+#특이한 정렬
+# def solution(numlist, n):
+#     answer = []
+#     for i in numlist:
+#         if numlist[i] < n:
+#             answer.append(numlist[i])
+# numlist = [1, 2, 3, 4, 5, 6]
+# n = 4
+
+
+
+
+# def solution(numlist, n):
+#     answer = []
+#     for i in range(len(numlist)):
+#         d = n - numlist[i]
+#         if d < 0:
+#             d = -d
+#         numlist[i] = [d, numlist[i]]
+#     numlist.sort()
+#     for i in range(len(numlist)):
+#         if numlist[i-1][0] == numlist[i][0] and numlist[i-1][1] < numlist[i][1]:
+#             answer.insert(i-1, numlist[i][1])
+#         else:
+#             answer.append(numlist[i][1])
+#     return answer
+
+
+
+# def solution2(numlist, n):
+#     numlist.sort(key = lambda x: (abs(n-x), -x))
+#     return numlist
+
+
+
+#명예의 전당(1)
+# def solution(k, score):
+#     answer = []
+#     check = []
+#     for i in score:
+#         index = 0
+#         while len(check) > index:
+#             if check[index] >= i:
+#                 break
+#             index += 1
+#         check.insert(index,i)
+#         if len(check) < k:
+#             answer.append(check[0])
+#         else:
+#             answer.append(check[-k])
+#     return answer
+# score = [10, 100, 20, 150, 1, 100, 200]
+# k = 3
+# print(solution(k, score))
+
+
+#카펫
